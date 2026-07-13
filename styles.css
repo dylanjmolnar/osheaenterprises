@@ -654,6 +654,17 @@ img {
     font-size: 0.9rem;
 }
 
+.powered-link {
+    color: #5c008e;
+    font-weight: 500;
+    transition: var(--transition-fast);
+}
+
+.powered-link:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
 /* --- Responsive Design --- */
 @media (max-width: 992px) {
     .hero-title {
