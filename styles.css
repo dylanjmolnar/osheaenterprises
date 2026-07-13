@@ -556,7 +556,9 @@ img {
 
 .stats-container {
     display: flex;
-    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
     margin-top: 3rem;
     padding-top: 2rem;
     border-top: 1px solid rgba(198, 156, 58, 0.2);
@@ -569,7 +571,7 @@ img {
 
 .stat-number {
     font-family: var(--font-heading);
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     color: var(--gold);
     font-weight: 700;
     line-height: 1;
@@ -587,6 +589,13 @@ img {
     position: relative;
     height: 500px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image {
+    padding: 0.5rem;
 }
 
 .about-logo-overlay {
@@ -656,8 +665,12 @@ img {
     }
     
     .about-image-wrapper {
-        height: 400px;
+        height: 250px;
         order: -1;
+    }
+
+    .stat-number {
+        font-size: 2rem;
     }
 }
 
@@ -693,6 +706,24 @@ img {
     
     .hero-cta {
         flex-direction: column;
+    }
+    
+    .hero-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 1.2rem;
+    }
+    
+    .hero-arrow-left {
+        left: 0.5rem;
+    }
+    
+    .hero-arrow-right {
+        right: 0.5rem;
+    }
+    
+    .hero-content {
+        padding: 1rem 3rem; /* Give space for the arrows */
     }
 }
 
