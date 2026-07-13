@@ -26,7 +26,7 @@
         "image": "https://osheaenterprises.com/logo.png",
         "description": "Premium landscaping and home maintenance services in New England.",
         "areaServed": "New England",
-        "serviceType": ["Landscaping", "Home Maintenance"],
+        "serviceType": ["Landscaping", "Home Maintenance", "Moving"],
         "address": {
             "@type": "PostalAddress",
             "addressRegion": "New England"
@@ -66,7 +66,8 @@
 
     <main>
         <section id="hero" class="hero">
-            <div class="hero-bg" style="background-image: url('landscaping 1.jpeg');"></div>
+            <div class="hero-bg hero-bg-1" style="background-image: url('rotating/landscaping 1.jpeg');"></div>
+            <div class="hero-bg hero-bg-2"></div>
             <div class="hero-overlay"></div>
             <div class="container hero-content">
                 <h1 class="hero-title">Elevating Your Estate</h1>
@@ -76,6 +77,8 @@
                     <a href="#contact" class="btn btn-secondary">Get a Quote</a>
                 </div>
             </div>
+            <button class="hero-arrow hero-arrow-left" aria-label="Previous image">&#10094;</button>
+            <button class="hero-arrow hero-arrow-right" aria-label="Next image">&#10095;</button>
         </section>
 
         <section id="services" class="services section">
@@ -89,11 +92,11 @@
                 <div class="services-grid">
                     <div class="service-card">
                         <div class="service-image-container">
-                            <div class="service-image" style="background-image: url('landscaping 2.jpeg');"></div>
+                            <div class="service-image" style="background-image: url('landscaping/landscaping.jpeg');"></div>
                             <div class="service-icon">🍃</div>
                         </div>
                         <div class="service-content">
-                            <h3 class="service-title">Premium Landscaping</h3>
+                            <h3 class="service-title">Premium Landscaping & Hardscaping</h3>
                             <p class="service-text">From intricate garden designs to complete outdoor living transformations, our landscaping team crafts environments of breathtaking beauty.</p>
                             <a href="#contact" class="service-link">Inquire Now &rarr;</a>
                         </div>
@@ -101,13 +104,24 @@
                     
                     <div class="service-card">
                         <div class="service-image-container">
-                            <!-- Blank placeholder as requested -->
-                            <div class="service-image placeholder-bg"></div>
+                            <div class="service-image" style="background-image: url('maintenance/home_maintenance.jpeg');"></div>
                             <div class="service-icon">🛠️</div>
                         </div>
                         <div class="service-content">
                             <h3 class="service-title">Home Maintenance</h3>
                             <p class="service-text">Comprehensive interior and exterior maintenance solutions, ensuring your home remains in pristine condition year-round.</p>
+                            <a href="#contact" class="service-link">Inquire Now &rarr;</a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-image-container">
+                            <div class="service-image" style="background-image: url('moving/moving.jpeg');"></div>
+                            <div class="service-icon">📦</div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Moving Services</h3>
+                            <p class="service-text">Reliable and professional moving services for residential and commercial relocations. We handle your belongings with the utmost care from start to finish.</p>
                             <a href="#contact" class="service-link">Inquire Now &rarr;</a>
                         </div>
                     </div>
@@ -120,7 +134,7 @@
                 <div class="about-grid">
                     <div class="about-content">
                         <h2 class="section-title">About O'Shea Enterprises</h2>
-                        <div class="title-divider left"></div>
+                        <div class="title-divider"></div>
                         <p class="about-text">O'Shea Enterprises stands as a hallmark of quality and prestige. Our mission is to provide an elite level of service that transforms and preserves your most valuable assets.</p>
                         <p class="about-text">We understand that your estate is a reflection of your legacy. That is why our dedicated teams in landscaping and home maintenance employ only the highest standards of craftsmanship, bringing a regal touch to every project.</p>
                         
@@ -133,10 +147,13 @@
                                 <span class="stat-number">Premium</span>
                                 <span class="stat-label">Quality</span>
                             </div>
+                            <div class="stat-item">
+                                <span class="stat-number">Unwavering</span>
+                                <span class="stat-label">Integrity</span>
+                            </div>
                         </div>
                     </div>
                     <div class="about-image-wrapper">
-                        <!-- Blank placeholder as requested -->
                         <div class="about-image placeholder-bg-dark">
                             <img src="logo.png" alt="O'Shea Logo" class="about-logo-overlay">
                         </div>
@@ -161,12 +178,12 @@
                         <span>New England</span>
                     </li>
                     <li>
-                        <span class="contact-icon">📞</span>
-                        <span>(555) 123-4567</span>
+                        <span class="contact-icon">📱</span>
+                        <span>Call or Text: <a href="tel:+19783401945" target="_blank" rel="noopener noreferrer">(978) 340-1945</a></span>
                     </li>
                     <li>
                         <span class="contact-icon">✉️</span>
-                        <span>inquiries@osheaenterprises.com</span>
+                        <a href="mailto:osheaenterprises2025@gmail.com" target="_blank" rel="noopener noreferrer">osheaenterprises2025@gmail.com</a>
                     </li>
                 </ul>
             </div>

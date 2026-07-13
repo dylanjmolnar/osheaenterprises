@@ -324,13 +324,15 @@ img {
     background-position: center;
     background-repeat: no-repeat;
     z-index: -2;
-    transform: scale(1.05);
-    animation: zoomOut 20s infinite alternate;
+    transition: opacity 1.5s ease;
 }
 
-@keyframes zoomOut {
-    0% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+.hero-bg-1 {
+    opacity: 1;
+}
+
+.hero-bg-2 {
+    opacity: 0;
 }
 
 .hero-overlay {
@@ -351,6 +353,39 @@ img {
 .hero-content {
     max-width: 800px;
     padding: 2rem;
+}
+
+.hero-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(198, 156, 58, 0.2);
+    border: 1px solid rgba(198, 156, 58, 0.4);
+    color: var(--white);
+    font-size: 1.5rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+    backdrop-filter: blur(4px);
+}
+
+.hero-arrow:hover {
+    background: rgba(198, 156, 58, 0.5);
+    border-color: var(--gold);
+}
+
+.hero-arrow-left {
+    left: 2rem;
+}
+
+.hero-arrow-right {
+    right: 2rem;
 }
 
 .hero-title {
@@ -408,7 +443,7 @@ img {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 3rem;
     margin-top: 3rem;
 }
@@ -450,7 +485,7 @@ img {
 
 .service-icon {
     position: absolute;
-    bottom: -20px;
+    bottom: 15px;
     right: 30px;
     width: 50px;
     height: 50px;

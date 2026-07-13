@@ -13,6 +13,56 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Hero background image rotation
+    const heroImages = [
+        'rotating/landscaping 1.jpeg',
+        'rotating/153B0843-A597-47E6-B5FC-630C1B80D2BC_1_102_o.jpeg',
+        'rotating/17741B17-9F60-44D0-9FE2-B6B26A75B4BA_1_105_c.jpeg',
+        'rotating/5339AF6C-7635-474B-A0C4-2E21D70798DC_1_105_c.jpeg',
+        'rotating/54CF7E3A-0FF9-4D3B-BE80-AC467984CFE5_1_105_c.jpeg',
+        'rotating/B7FD7874-58A0-4AC3-A373-190B7DEB03E1_1_105_c.jpeg',
+        'rotating/DA2B54FE-7A7B-4A16-99FA-FC48D4A85A4F_1_105_c.jpeg',
+        'rotating/E201AAB8-BA69-4E86-A99F-8B17B0FFCC5A_1_102_o.jpeg'
+    ];
+    let currentImageIndex = 0;
+    const heroBg1 = document.querySelector('.hero-bg-1');
+    const heroBg2 = document.querySelector('.hero-bg-2');
+    let autoRotateTimer;
+
+    function goToImage(index) {
+        currentImageIndex = ((index % heroImages.length) + heroImages.length) % heroImages.length;
+        const nextImage = heroImages[currentImageIndex];
+
+        if (heroBg1.style.opacity === '1' || heroBg1.style.opacity === '') {
+            heroBg2.style.backgroundImage = `url('${nextImage}')`;
+            heroBg2.style.opacity = '1';
+            heroBg1.style.opacity = '0';
+        } else {
+            heroBg1.style.backgroundImage = `url('${nextImage}')`;
+            heroBg1.style.opacity = '1';
+            heroBg2.style.opacity = '0';
+        }
+    }
+
+    function resetAutoRotate() {
+        clearInterval(autoRotateTimer);
+        autoRotateTimer = setInterval(() => goToImage(currentImageIndex + 1), 6000);
+    }
+
+    // Arrow click handlers
+    document.querySelector('.hero-arrow-left').addEventListener('click', () => {
+        goToImage(currentImageIndex - 1);
+        resetAutoRotate();
+    });
+
+    document.querySelector('.hero-arrow-right').addEventListener('click', () => {
+        goToImage(currentImageIndex + 1);
+        resetAutoRotate();
+    });
+
+    // Start auto-rotation
+    autoRotateTimer = setInterval(() => goToImage(currentImageIndex + 1), 6000);
+
     // Mobile menu toggle
     mobileMenuToggle.addEventListener('click', () => {
         navList.classList.toggle('active');
